@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.hanbit.memberapp.R;
 
@@ -43,11 +42,11 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
 
         switch(v.getId()){
             case R.id.btSubmit:
-                Toast.makeText(UpdateActivity.this,"Click Submit", Toast.LENGTH_LONG).show();
+                //Toast.makeText(UpdateActivity.this,"Click Submit", Toast.LENGTH_LONG).show();
                 this.startActivity(new Intent(UpdateActivity.this, ListActivity.class));
                 break;
             case R.id.btCancel:
-                Toast.makeText(UpdateActivity.this,"Click Submit", Toast.LENGTH_LONG).show();
+                //Toast.makeText(UpdateActivity.this,"Click Submit", Toast.LENGTH_LONG).show();
                 this.startActivity(new Intent(UpdateActivity.this, ListActivity.class));
                 break;
         }

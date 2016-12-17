@@ -8,10 +8,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.hanbit.memberapp.R;
+import com.hanbit.memberapp.domain.MemberBean;
+import com.hanbit.memberapp.service.MemberService;
+import com.hanbit.memberapp.service.MemberserviceImpl;
+
+import java.util.List;
 
 public class ListActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btDetail, btFind;
+    MemberService service;
+    MemberBean member;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +27,11 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
 
         btDetail = (Button) findViewById(R.id.btDetail);
         btFind = (Button) findViewById(R.id.btFind);
-
         btDetail.setOnClickListener(this);
         btFind.setOnClickListener(this);
 
+        service = new MemberserviceImpl(getApplicationContext());
+        List<MemberBean>list = service.list();
     }
 
     @Override
